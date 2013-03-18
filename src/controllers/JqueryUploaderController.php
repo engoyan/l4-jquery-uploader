@@ -4,8 +4,7 @@ class JqueryUploaderController extends \Illuminate\Routing\Controllers\Controlle
 
     public function index()
     {
-        die("hellop");
-        return \View::make('uploader::index.hello');
+        return \View::make('jquery-uploader::jquery-uploader.index');
     }
 
 }

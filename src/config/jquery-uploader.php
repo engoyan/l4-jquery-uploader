@@ -8,10 +8,18 @@ return array(
         //base url for the index action 
         'index' =>  'upload',
         'before' => false,
+        
         'personalize' => false,
         
         //UploadHandler options
         'options' => array(
+        
+            /*
+            * added options
+            */
+            //must be a valid route alias
+            'donext' => false,
+        
             //needs the trailing slash for now
             'upload_dir' => __DIR__ . '/../../../../storage/files/',
             'thumb_dir' => __DIR__ . '/../../../../storage/files/thumbnail/',
@@ -71,7 +79,7 @@ return array(
                 ),
                 */
                 // Uncomment the following to create medium sized images:
-                'medium' => array(
+                'm200' => array(
                     'max_width' => 200,
                     'max_height' => 200,
                     'jpeg_quality' => 80
@@ -80,7 +88,8 @@ return array(
                     'max_width' => 80,
                     'max_height' => 80
                 )
-            ),  
+            ),
+              
         ),
     ),
 

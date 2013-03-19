@@ -47,6 +47,12 @@ class UploadHandlerManager {
     {
         $config = $this->getConfig($name);
         $options = $config['options'];
+        
+        if (is_callable($config['personalize'])) {
+            $personalize = $config['personalize'];
+            $personalize($options);     
+        } 
+        
         return new DwsUploadHandler($options, $initialize);
     }
 

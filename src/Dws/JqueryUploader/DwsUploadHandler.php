@@ -17,9 +17,9 @@ class DwsUploadHandler extends UploadHandler
     
     protected function get_download_url($file_name, $version = null) {
         if ($version) {
-            return  $this->options['thumb_url'] .'/' . rawurlencode($file_name);
+            return  $this->options['thumb_url'] . '/' . rawurlencode($file_name);
         } else {
-            return  $this->options['upload_url'] .'/' . rawurlencode($file_name);
+            return  $this->options['upload_url'] . '/' . rawurlencode($file_name);
         } 
     }
     
@@ -36,5 +36,19 @@ class DwsUploadHandler extends UploadHandler
         }
     }
     
+    public function getOption($name) {
+        
+        if (!array_key_exists($name,$this->options)) {
+            return false;
+        }
+        
+        return $this->options[$name];
+    
+    }
+    
+    public function setOption($name, $value)
+    {
+        $this->options[$name] = $value;
+    }
     
 }

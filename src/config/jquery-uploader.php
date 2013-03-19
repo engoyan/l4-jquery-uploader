@@ -3,9 +3,13 @@
 return array(
 
     'default-uploader' => array(
+        
         'controller' => 'Dws\JqueryUploader\Controller\JqueryUploaderController',
-        //base url for the index page 
+        //base url for the index action 
         'index' =>  'upload',
+        'before' => false,
+        'personalize' => false,
+        
         //UploadHandler options
         'options' => array(
             //needs the trailing slash for now

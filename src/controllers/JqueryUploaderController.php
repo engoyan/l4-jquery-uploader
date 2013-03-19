@@ -5,7 +5,7 @@ use Request;
 class JqueryUploaderController extends \Illuminate\Routing\Controllers\Controller {
 
     public function index()
-    {
+    {   
         return \View::make('jquery-uploader::jquery-uploader.index');
     }
     
@@ -26,7 +26,8 @@ class JqueryUploaderController extends \Illuminate\Routing\Controllers\Controlle
                 $dir = $handler->getThumbDir();
                 break;
             default:
-                $dir = $handler->getUploadDir();    
+                $dir = $handler->getUploadDir();
+                break;    
         }
         
         $file = $dir . $filename; 

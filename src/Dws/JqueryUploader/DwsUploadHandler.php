@@ -4,16 +4,10 @@ namespace Dws\JqueryUploader;
 class DwsUploadHandler extends UploadHandler
 {
     
-    public function getUploadDir()
+    public function getUploadDir($version=false)
     {
-        return $this->options['upload_dir'];
+        return $version ? $this->options['upload_dir'] . $version . "/" : $this->options['upload_dir'];
     }
-    
-    public function getThumbDir()
-    {
-        return $this->options['thumb_dir'];
-    }
-    
     
     protected function get_download_url($file_name, $version = null) {
         if ($version) {

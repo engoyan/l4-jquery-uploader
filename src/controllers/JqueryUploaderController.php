@@ -21,20 +21,17 @@ class JqueryUploaderController extends \Illuminate\Routing\Controllers\Controlle
         $manager = \App::make('jquery-uploader');
         $handler = $manager->get('default-uploader', false);
         
-        switch ($version) {
-            case "thumbnail":
-                $dir = $handler->getThumbDir();
-                break;
-            default:
-                $dir = $handler->getUploadDir();
-                break;    
+        if ($version != 'full') {
+            $dir = $handler->getUploadDir($version);    
+        } else {
+            $dir = $handler->getUploadDir();    
         }
         
         $file = $dir . $filename; 
         $filename = basename($file);
         $file_extension = strtolower(substr(strrchr($filename,"."),1));
         
-        switch( $file_extension ) {
+        switch ($file_extension) {
             case "gif": $ctype="image/gif"; break;
             case "png": $ctype="image/png"; break;
             case "jpeg":

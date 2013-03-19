@@ -25,9 +25,20 @@ Route::get('some-route', function()
 
 foreach ($config as $name => $attribs)
 {
-    Route::any($attribs['index'], array(
+    Route::get($attribs['index'], array(
         'uses' => $attribs['controller'] . '@index', 
         'as' => $name . '-index',
-    ));  
+    ));
+ 
+    Route::any($attribs['index'] . '-run', array(
+        'uses' => $attribs['controller'] . '@run', 
+        'as' => $name . '-run',
+    ));
+    
+    Route::get($attribs['index'] . '-view/{version}/{filename}', array(
+        'uses' => $attribs['controller'] . '@view', 
+        'as' => $name . '-view',
+    ));
+  
 }
 

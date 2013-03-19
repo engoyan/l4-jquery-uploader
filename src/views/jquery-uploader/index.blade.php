@@ -41,7 +41,7 @@
         <h1>Choose Files To Upload</h1>
     </div>
     <!-- The file upload form used as target for the file upload widget -->
-    <form id="fileupload" action="server/php/index.php" method="POST" enctype="multipart/form-data">
+    <form id="fileupload" action="{{URL::route('default-uploader-run')}}" method="POST" enctype="multipart/form-data">
         <!-- Redirect browsers with JavaScript disabled to the origin page -->
         <noscript><input type="hidden" name="redirect" value="http://blueimp.github.com/jQuery-File-Upload/"></noscript>
         <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->

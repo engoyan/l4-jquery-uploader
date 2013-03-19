@@ -29,7 +29,10 @@ class JqueryUploaderServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+        $this->app['jquery-uploader'] = $this->app->share(function($app)
+        {
+            return new UploadHandlerManager($app);
+        });
 	}
 
 	/**
@@ -39,7 +42,7 @@ class JqueryUploaderServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array();
+		return array('jquery-uploader');
 	}
 
 }

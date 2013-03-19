@@ -22,7 +22,6 @@ return array(
         
             //needs the trailing slash for now
             'upload_dir' => __DIR__ . '/../../../../storage/files/',
-            'thumb_dir' => __DIR__ . '/../../../../storage/files/thumbnail/',
             'user_dirs' => false,
             'mkdir_mode' => 0755,
             'param_name' => 'files',
@@ -89,7 +88,6 @@ return array(
                     'max_height' => 80
                 )
             ),
-              
         ),
     ),
 

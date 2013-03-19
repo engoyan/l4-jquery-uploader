@@ -69,6 +69,7 @@ class UploadHandlerManager {
         $config = $configs[$name];
         $config['options']['upload_url'] = $config['index'] . '-view/full';
         $config['options']['thumb_url'] = $config['index'] . '-view/thumbnail';
+        $config['options']['delete_url'] = $config['index'] . '-run';
 
         return $config;                                             
     

@@ -48,7 +48,7 @@ class UploadHandler
         }
     }
 
-    protected function initialize() {
+    public function initialize() {
         switch ($_SERVER['REQUEST_METHOD']) {
             case 'OPTIONS':
             case 'HEAD':

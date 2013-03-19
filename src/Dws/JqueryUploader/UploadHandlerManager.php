@@ -27,7 +27,7 @@ class UploadHandlerManager {
      * @param  string  $name
      * @return Dws\JqueryUploader\UploadHandler
      */
-    public function get($name = null, $initialize=true)
+    public function get($name = null, $initialize=false)
     {
         if (!isset($this->handlers[$name]))
         {

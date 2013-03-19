@@ -7,7 +7,7 @@ class JqueryUploaderController extends \Illuminate\Routing\Controllers\Controlle
     public function index()
     {   
         $manager = \App::make('jquery-uploader');
-        $handler = $manager->get('default-uploader', false);
+        $handler = $manager->get('default-uploader');
         $donext = $handler->getOption('donext');
         return \View::make('jquery-uploader::jquery-uploader.index', array('donext' => $donext));
     }
@@ -16,13 +16,14 @@ class JqueryUploaderController extends \Illuminate\Routing\Controllers\Controlle
     {
         $manager = \App::make('jquery-uploader');
         $handler = $manager->get('default-uploader');
+        $handler->initialize();
     }
     
     public function view($version, $filename)
     {
         
         $manager = \App::make('jquery-uploader');
-        $handler = $manager->get('default-uploader', false);
+        $handler = $manager->get('default-uploader');
         
         if ($version != 'full') {
             $dir = $handler->getUploadDir($version);    

@@ -29,9 +29,9 @@
 <!-- Bootstrap Image Gallery styles -->
 <link rel="stylesheet" href="http://blueimp.github.com/Bootstrap-Image-Gallery/css/bootstrap-image-gallery.min.css">
 <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
-<link rel="stylesheet" href="packages/dws/jquery-uploader/assets/css/jquery.fileupload-ui.css">
+<link rel="stylesheet" href="/packages/dws/jquery-uploader/assets/css/jquery.fileupload-ui.css">
 <!-- CSS adjustments for browsers with JavaScript disabled -->
-<noscript><link rel="stylesheet" href="packages/dws/jquery-uploader/assets/css/jquery.fileupload-ui-noscript.css"></noscript>
+<noscript><link rel="stylesheet" href="/packages/dws/jquery-uploader/assets/css/jquery.fileupload-ui-noscript.css"></noscript>
 <!-- Shim to make HTML5 elements usable in older Internet Explorer versions -->
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
@@ -176,7 +176,7 @@
 </script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
-<script src="packages/dws/jquery-uploader/assets/js/vendor/jquery.ui.widget.js"></script>
+<script src="/packages/dws/jquery-uploader/assets/js/vendor/jquery.ui.widget.js"></script>
 <!-- The Templates plugin is included to render the upload/download listings -->
 <script src="http://blueimp.github.com/JavaScript-Templates/tmpl.min.js"></script>
 <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
@@ -187,15 +187,15 @@
 <script src="http://blueimp.github.com/cdn/js/bootstrap.min.js"></script>
 <script src="http://blueimp.github.com/Bootstrap-Image-Gallery/js/bootstrap-image-gallery.min.js"></script>
 <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
-<script src="packages/dws/jquery-uploader/assets/js/jquery.iframe-transport.js"></script>
+<script src="/packages/dws/jquery-uploader/assets/js/jquery.iframe-transport.js"></script>
 <!-- The basic File Upload plugin -->
-<script src="packages/dws/jquery-uploader/assets/js/jquery.fileupload.js"></script>
+<script src="/packages/dws/jquery-uploader/assets/js/jquery.fileupload.js"></script>
 <!-- The File Upload file processing plugin -->
-<script src="packages/dws/jquery-uploader/assets/js/jquery.fileupload-fp.js"></script>
+<script src="/packages/dws/jquery-uploader/assets/js/jquery.fileupload-fp.js"></script>
 <!-- The File Upload user interface plugin -->
-<script src="packages/dws/jquery-uploader/assets/js/jquery.fileupload-ui.js"></script>
+<script src="/packages/dws/jquery-uploader/assets/js/jquery.fileupload-ui.js"></script>
 <!-- The main application script -->
-<script src="packages/dws/jquery-uploader/assets/js/main.js"></script>
+<script src="/packages/dws/jquery-uploader/assets/js/main.js"></script>
 <!-- The XDomainRequest Transport is included for cross-domain file deletion for IE8+ -->
 <!--[if gte IE 8]><script src="js/cors/jquery.xdr-transport.js"></script><![endif]-->
 </body> 

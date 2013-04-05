@@ -8,8 +8,9 @@ class JqueryUploaderController extends \Illuminate\Routing\Controllers\Controlle
     {   
         $manager = \App::make('jquery-uploader');
         $handler = $manager->get('default-uploader');
-        $donext = $handler->getOption('donext');
-        return \View::make('jquery-uploader::jquery-uploader.index', array('donext' => $donext));
+        $donext_params = $handler->getOption('donext_params');
+        return \View::make('jquery-uploader::jquery-uploader.index', array('donext' => $donext, 'donext_params' => $donext_params));
+
     }
     
     public function run()

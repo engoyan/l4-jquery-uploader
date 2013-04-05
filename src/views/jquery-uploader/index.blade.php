@@ -85,7 +85,7 @@
     </form>
     <br>
     @if($donext)
-        <a href="{{URL::route($donext)}}" class="btn btn-success pull-right">Next</a>
+        <a href="{{URL::route($donext, $donext_params)}}" class="btn btn-success pull-right">Next</a>
     @endif
 </div>
 <!-- modal-gallery is the modal dialog used for the image gallery -->

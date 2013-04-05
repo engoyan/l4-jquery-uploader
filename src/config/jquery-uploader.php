@@ -19,7 +19,7 @@ return array(
             */
             //must be a valid route alias
             'donext' => false,
-        
+            'donext_params' => [],
             //needs the trailing slash for now
             'upload_dir' => __DIR__ . '/../../../../storage/files/',
             'user_dirs' => false,
